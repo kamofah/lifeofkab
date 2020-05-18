@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     height: 100vh ;
     width: 100vw;
@@ -33,7 +37,7 @@ body {
     border-bottom: solid 2px black;
 }
 
-div > button{
+div > a > button{
     margin-right: 10px;
     margin-bottom: 10px;
     height: 56px;
@@ -47,9 +51,11 @@ div > button{
 
 #aboutArea {
     height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     padding: 25px;
+    background-color: #333;
 }
 
 #speakingHud {
@@ -61,6 +67,20 @@ div > button{
     background-color: black;
     color: white;
     height: 154px;
+    position: relative;
+    animation-name: slideIn;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+    0%{
+        left: -500px;
+    }
+
+    100%{
+        left: 10px;
+    }
 }
 
 #speakingHud > img {
@@ -82,8 +102,85 @@ div > button{
    height: 50px;
    background-color: white;
    margin-left: 130px;
+   margin-bottom: 10px;
 }
 
+#interests {
+    display: flex;
+    /* margin-left: 35px ;   */
+    margin-top: 135px;
+    justify-content: center;
+}
+
+#interests > img {
+    height: 350px;
+    width:  350px;
+}
+
+#ball {
+    position: relative;
+    animation-name: slideIn;
+    /* animation-delay: 5s; */
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#photograph {
+    position: relative;
+    animation: slideUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes slideUp{
+    0%{
+        bottom: -500px;
+    }
+
+    100%{
+        bottom: 10px;
+    }
+}
+
+#kaws {
+    position: relative;
+    animation: slideDown;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideDown{
+    0%{
+        top: -500px;
+    }
+
+    100%{
+        top: 10px;
+    }
+}
+
+#videogames{
+    position: relative;
+    animation: slideInL;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideInL{
+    0%{
+        right: -500px;
+    }
+
+    100%{
+        right: 10px;
+    }
+}
+
+#projectArea {
+    height: 100vh;
+    width: 100vw;
+}
 
 
 

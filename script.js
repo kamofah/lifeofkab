@@ -1,5 +1,6 @@
+// This code is for typing out the "Welcome to the life of K.A.B" phrase on the intro screen
 let intro = document.getElementById("intro");
-let introPhrase = "WELCOME TO THE LIFE OF KAB";
+let introPhrase = "WELCOME TO THE LIFE OF K.A.B";
 let phraseArr = introPhrase.split("");
 let phraseLength = introPhrase.length;
 let str = "";
@@ -25,9 +26,29 @@ function typePhrase(){
     if(counter == 10){
         str += "\n";
     }
-    if(counter == 7 ||  counter == 14 || counter == 19 || counter ==  22){
+    if(phraseArr[counter] == " "){
         str += " ";
     }
     counter++;
 }
+
+// This code types out the phrases on the speaking hud
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+
 
