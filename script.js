@@ -7,7 +7,7 @@ let str = "";
 let counter = 0;
 
 
-intro.addEventListener("click", () => {
+document.addEventListener("DOMContentLoaded", () => {
     intro.innerText = "";
     setInterval(typePhrase , 100);
     counter = 0;
@@ -33,7 +33,12 @@ function typePhrase(){
 }
 
 // This code types out the phrases on the speaking hud
-
+// let content = document.getElementById("intro");
+// let introPhrase = "WELCOME TO THE LIFE OF K.A.B";
+// let phraseArr = introPhrase.split("");
+// let phraseLength = introPhrase.length;
+// let str = "";
+// let counter = 0;
 
 
 
