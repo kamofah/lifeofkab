@@ -9,4 +9,3 @@ and also direct people to information such as my resume and social media outlets
 • Used Javascript DOM 
 • Used Flexbox and Bootstrap
 • Used HTML & CSS
->
