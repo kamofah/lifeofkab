@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     str = "";
 })
 
-function typePhrase(){
+function typePhrase(element , tracker , strTracker , arr){
     if(counter <= 12){
         intro.innerText = str + phraseArr[counter];
     }
@@ -32,62 +32,56 @@ function typePhrase(){
     counter++;
 }
 
-// This code types out the phrases on the speaking hud
-// let content = document.getElementById("intro");
-// let introPhrase = "WELCOME TO THE LIFE OF K.A.B";
-// let phraseArr = introPhrase.split("");
-// let phraseLength = introPhrase.length;
-// let str = "";
-// let counter = 0;
 
 
-
-// Animation 
+// Animation Control
 let speakingHud = document.getElementById("speakingHud");
 let kaws = document.getElementById("kaws");
 let videogames = document.getElementById("videogames");
 let basketball = document.getElementById("ball");
 let photo = document.getElementById("photograph");
 let about = document.getElementById("about");
+
 about.addEventListener("click", () => {
     setInterval(() => {
-        speakingHud.style.animationName = "slideIn";
-        speakingHud.style.animationDuration = "1s";
-        speakingHud.style.animationFillMode = "forwards";
+        setAnimation(speakingHud , "slideIn");
     } , 1000)
     
     setInterval(() => {
         // controls animation for basketball image
-        basketball.style.visibility = "visible";
-        basketball.style.animationName = "slideIn";
-        basketball.style.webkitAnimationDuration = "1s";
-        basketball.style.webkitAnimationFillMode = "forwards";
+        setAnimation(basketball, "slideIn");
     } , 3000)
 
     setInterval(() => {
         // controls the animation for the camera image
-        photo.style.visibility = "visible";
-        photo.style.animationName = "slideUp";
-        photo.style.webkitAnimationDuration = "1s";
-        photo.style.webkitAnimationFillMode = "forwards";
+        setAnimation(photo, "slideUp");
     }, 4000);
 
     setInterval(() => {
         // controls the animation for the Kaws image 
-        kaws.style.visibility = "visible";
-        kaws.style.animationName = "slideDown";
-        kaws.style.webkitAnimationDuration = "1s";
-        kaws.style.webkitAnimationFillMode = "forwards";
+        setAnimation(kaws, "slideDown");
     }, 5000);
 
     setInterval(() => {
         // controls the animation for the video games image
-        videogames.style.visibility = "visible";
-        videogames.style.animationName = "slideInL";
-        videogames.style.webkitAnimationDuration = "1s";
-        videogames.style.webkitAnimationFillMode = "forwards";
+        setAnimation(videogames, "slideInL");
     }, 6000);
 
-})
+});
+
+function setAnimation(imageName , animationType ){
+    imageName.style.visibility = "visible";
+    imageName.style.animationName = animationType;
+    imageName.style.animationDuration = "1s";
+    imageName.style.animationFillMode = "forwards";
+}
+
+// This code does a type out animation for the phrase in the speaking hud
+let content = document.getElementById("content");
+let contentPhrase = "Hi, my name is Kwaku Amofah-Boafo and I'm an aspiring Software Engineer with interests in Basketball, Photography, Streetwear and Game Development.";
+let contentArr = contentPhrase.split("");
+let contentLength = contentPhrase.length;
+let contentStr = "";
+let contentCounter = 0;
 
 
