@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     str = "";
 })
 
-function typePhrase(element , tracker , strTracker , arr){
+function typePhrase(){
     if(counter <= 12){
         intro.innerText = str + phraseArr[counter];
     }
@@ -31,8 +31,6 @@ function typePhrase(element , tracker , strTracker , arr){
     }
     counter++;
 }
-
-
 
 // Animation Control
 let speakingHud = document.getElementById("speakingHud");
@@ -76,12 +74,5 @@ function setAnimation(imageName , animationType ){
     imageName.style.animationFillMode = "forwards";
 }
 
-// This code does a type out animation for the phrase in the speaking hud
-let content = document.getElementById("content");
-let contentPhrase = "Hi, my name is Kwaku Amofah-Boafo and I'm an aspiring Software Engineer with interests in Basketball, Photography, Streetwear and Game Development.";
-let contentArr = contentPhrase.split("");
-let contentLength = contentPhrase.length;
-let contentStr = "";
-let contentCounter = 0;
 
 
