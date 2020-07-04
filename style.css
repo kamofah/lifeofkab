@@ -12,7 +12,7 @@ body {
     overflow-y: hidden;
 }
 
-#welcome{
+#welcome {
     display:flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +38,7 @@ body {
     border-bottom: solid 2px black;
 }
 
-div > a > button{
+div > a > button {
     margin-right: 10px;
     margin-bottom: 10px;
     height: 56px;
@@ -59,17 +59,18 @@ div > a > button{
     background-color: #333;
 }
 
-#aboutArea > #back{
+#aboutArea > #back {
     display: flex;
     justify-content: flex-end;
 }
 
-#aboutArea > #back > a > button{
+#aboutArea > #back > a > button {
     margin-top: 55px;
     background-color: white
 }
 
 #speakingHud {
+    left: -700px;
     font-family: 'VT323', monospace; 
     font-size: 17px;
     border: solid 2px black;
@@ -79,9 +80,6 @@ div > a > button{
     color: white;
     height: 154px;
     position: relative;
-    animation-name: slideIn;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
 }
 
 @keyframes slideIn {
@@ -130,17 +128,12 @@ div > a > button{
 
 #ball {
     position: relative;
-    animation-name: slideIn;
-    /* animation-delay: 5s; */
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+    left: -500px;
 }
 
 #photograph {
+    bottom: -500px;
     position: relative;
-    animation: slideUp;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
 }
 
 
@@ -155,10 +148,12 @@ div > a > button{
 }
 
 #kaws {
+    top: -700px;
+    visibility: hidden;
     position: relative;
-    animation: slideDown;
+    /* animation: slideDown;
     animation-duration: 1s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
 }
 
 @keyframes slideDown{
@@ -172,10 +167,8 @@ div > a > button{
 }
 
 #videogames{
+    right: -500px;
     position: relative;
-    animation: slideInL;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
 }
 
 @keyframes slideInL{
