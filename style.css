@@ -82,15 +82,7 @@ div > a > button {
     position: relative;
 }
 
-@keyframes slideIn {
-    0%{
-        left: -500px;
-    }
 
-    100%{
-        left: 10px;
-    }
-}
 
 #speakingHud > img {
     height: 150px;
@@ -102,8 +94,7 @@ div > a > button {
     flex-direction: column;
     padding-top: 12px;
     padding-left: 12px;
-    padding-right: 12px;
-    
+    padding-right: 12px;  
 }
 
 #speakingHud > #content > button {
@@ -136,49 +127,15 @@ div > a > button {
     position: relative;
 }
 
-
-@keyframes slideUp{
-    0%{
-        bottom: -500px;
-    }
-
-    100%{
-        bottom: 10px;
-    }
-}
-
 #kaws {
     top: -700px;
     visibility: hidden;
     position: relative;
-    /* animation: slideDown;
-    animation-duration: 1s;
-    animation-fill-mode: forwards; */
-}
-
-@keyframes slideDown{
-    0%{
-        top: -500px;
-    }
-
-    100%{
-        top: 10px;
-    }
 }
 
 #videogames{
     right: -500px;
     position: relative;
-}
-
-@keyframes slideInL{
-    0%{
-        right: -500px;
-    }
-
-    100%{
-        right: 10px;
-    }
 }
 
 #projectArea {
@@ -203,7 +160,47 @@ div > a > button {
     justify-content: center;
 }
 
+/* Animations */
 
+@keyframes slideIn {
+    0%{
+        left: -500px;
+    }
+
+    100%{
+        left: 10px;
+    }
+}
+
+@keyframes slideUp{
+    0%{
+        bottom: -500px;
+    }
+
+    100%{
+        bottom: 10px;
+    }
+}
+
+@keyframes slideDown{
+    0%{
+        top: -500px;
+    }
+
+    100%{
+        top: 10px;
+    }
+}
+
+@keyframes slideInL{
+    0%{
+        right: -500px;
+    }
+
+    100%{
+        right: 10px;
+    }
+}
 
 
 

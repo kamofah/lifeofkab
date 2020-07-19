@@ -6,7 +6,6 @@ let phraseLength = introPhrase.length;
 let str = "";
 let counter = 0;
 
-
 document.addEventListener("DOMContentLoaded", () => {
     intro.innerText = "";
     setInterval(typePhrase , 100);
@@ -48,31 +47,39 @@ about.addEventListener("click", () => {
     setInterval(() => {
         // controls animation for basketball image
         setAnimation(basketball, "slideIn");
-    } , 3000)
+    } , 2000)
 
     setInterval(() => {
         // controls the animation for the camera image
         setAnimation(photo, "slideUp");
-    }, 4000);
+    }, 3000);
 
     setInterval(() => {
         // controls the animation for the Kaws image 
         setAnimation(kaws, "slideDown");
-    }, 5000);
+    }, 4000);
 
     setInterval(() => {
         // controls the animation for the video games image
         setAnimation(videogames, "slideInL");
-    }, 6000);
+    }, 5000);
 
 });
 
-function setAnimation(imageName , animationType ){
+function setAnimation(imageName , animationType){
     imageName.style.visibility = "visible";
     imageName.style.animationName = animationType;
     imageName.style.animationDuration = "1s";
     imageName.style.animationFillMode = "forwards";
 }
+
+// Next Button Events
+let next = document.getElementById("nxtButton");
+next.addEventListener("click" , () => {
+    setInterval(() => {
+     
+    } , 2000)
+})
 
 
 
