@@ -6,6 +6,8 @@ let phraseLength = introPhrase.length;
 let str = "";
 let counter = 0;
 
+
+
 document.addEventListener("DOMContentLoaded", () => {
     intro.innerText = "";
     setInterval(typePhrase , 100);
@@ -66,6 +68,7 @@ about.addEventListener("click", () => {
 
 });
 
+
 function setAnimation(imageName , animationType){
     imageName.style.visibility = "visible";
     imageName.style.animationName = animationType;
@@ -75,11 +78,53 @@ function setAnimation(imageName , animationType){
 
 // Next Button Events
 let next = document.getElementById("nxtButton");
-next.addEventListener("click" , () => {
-    setInterval(() => {
-     
-    } , 2000)
-})
+let maintanenceMessgae = document.createElement("h1");
+let backButton = document.getElementById("back")
+let interestArea = document.getElementById("interests");
+maintanenceMessgae.innerHTML = "Lifeofkab.com is still under construction, however if you still want to learn more about Kwaku take a look at his resume and projects using the links below"
+maintanenceMessgae.style.color = "white";
+maintanenceMessgae.style.fontFamily = 'VT323';
+maintanenceMessgae.style.marginTop = "100px"
+maintanenceMessgae.style.paddingLeft = "50px"
+next.addEventListener("click", function(){
+    speakingHud.remove();
+    kaws.remove();
+    photo.remove();
+    basketball.remove();
+    videogames.remove();
+    backButton.style.justifyContent = "center"
+    let resumeButton = document.createElement("button")
+    let projectsButton = document.createElement("button",)
+    createButton(projectsButton, "PROJECTS", "https://github.com/KwakuABoafo")
+    createButton(resumeButton, "RESUME", "https://docs.google.com/document/d/e/2PACX-1vQiasAB9jVrUBAm8DslJGAFHfAMH1qaEDrarzdZ_Mna1gQtc3NOdQPzKSCE9sdWklIanQeRpmkHKvAq/pub")
+    backButton.appendChild(resumeButton)
+    backButton.appendChild(projectsButton)
+    interestArea.appendChild(maintanenceMessgae)
+});
+
+function createButton(buttonElement, text, buttonLink){
+    buttonElement.style.marginTop = "55px";
+    buttonElement.className = "btn btn-outline-dark"
+    buttonElement.style.height = "55px"
+    buttonElement.style.backgroundColor = "white"
+    buttonElement.innerHTML = text
+    buttonElement.style.fontFamily = "VT323"
+    buttonElement.style.marginRight = "10px"
+    buttonElement.addEventListener("click", function(){
+        location = buttonLink
+    })
+}
+
+
+
+// This function will change the images 
+// function changeImages(){
+//     kaws.src = "assets/JavaLogo.jpg";
+//     basketball.src = "assets/JSLogo.jpg";
+//     console.log("clicked");
+// }
+
+
 
 
 
