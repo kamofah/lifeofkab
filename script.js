@@ -96,7 +96,7 @@ next.addEventListener("click", function(){
     let resumeButton = document.createElement("button")
     let projectsButton = document.createElement("button",)
     createButton(projectsButton, "PROJECTS", "https://github.com/KwakuABoafo")
-    createButton(resumeButton, "RESUME", "https://docs.google.com/document/d/e/2PACX-1vQiasAB9jVrUBAm8DslJGAFHfAMH1qaEDrarzdZ_Mna1gQtc3NOdQPzKSCE9sdWklIanQeRpmkHKvAq/pub")
+    createButton(resumeButton, "RESUME", "https://drive.google.com/file/d/16rB6tsaWKcbc9RWCyKd_IT-_oYEyESpx/view?usp=sharing")
     backButton.appendChild(resumeButton)
     backButton.appendChild(projectsButton)
     interestArea.appendChild(maintanenceMessgae)
